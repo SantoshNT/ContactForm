@@ -1,271 +1,280 @@
 <html>
 
 <head>
-  <title>Contact Form</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="jqueryUI/jquery-ui.css"> 
-  <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
-  <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="jquery/jquery.js"></script>
-  <script src="jqueryUI/jquery-ui.js"></script>
-  
+    <title>Contact Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+
 </head>
-<style>@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+<style>
+    @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
-body{
-  background-image: url(https://images.wallpaperscraft.com/image/surface_background_texture_light_51008_1680x1050.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
- background-attachment: fixed;
-}
+    body {
+        background-image: url(https://images.wallpaperscraft.com/image/surface_background_texture_light_51008_1680x1050.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 
-form{
-    color:brown;
-    box-shadow: 5px 10px brown;
-    border:2px black;
-    margin-top: 2%;
-    margin-right: 2%;
-    margin-left: 2%;
-    border:2px solid black;
-    padding: 10px;
-}
-#text{
- 
-    color:brown;
-    border:2px solid black;
-    width:44%;
-    
-    border-radius: 1.5vw;
-    box-shadow: 5px 10px brown;
-}
-.btn {
-    background-color: transparent;
-    color:black;
-    border:2px solid black;
-    box-shadow: 2px 2px brown;
-    font-weight: 900;
-    margin-left: 2%;
-    padding: 2px;
-}
-h1 {
- 
-  position: relative;
-  animation-name: mymove;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-direction:alternate;
-}
+    form {
+        color: brown;
+        box-shadow: 5px 10px brown;
+        border: 2px black;
+        margin-top: 2%;
+        margin-right: 2%;
+        margin-left: 2%;
+        border: 2px solid black;
+        padding: 10px;
+    }
 
-@keyframes mymove {
-  from {left: 5%;}
-  to {left: 55%;}
-}
+    #text {
+
+        color: brown;
+        border: 2px solid black;
+        width: 44%;
+        border-radius: 1.5vw;
+        box-shadow: 5px 10px brown;
+    }
+
+    .btn {
+        background-color: transparent;
+        color: black;
+        border: 2px solid black;
+        box-shadow: 2px 2px brown;
+        font-weight: 900;
+        margin-left: 2%;
+        padding: 2px;
+        cursor: pointer;
+    }
+
+    h1 {
+
+        position: relative;
+        animation-name: mymove;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes mymove {
+        from {
+            left: 5%;
+        }
+
+        to {
+            left: 55%;
+        }
+    }
 </style>
+
 <body>
     <div class="container">
         <h1 id="text">Contact form for fitness trainer</h1>
-    <form id="mainForm" onsubmit="validate1()"> 
-        
-          <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputfirst">First Name</label>
-            <input type="text" class="form-control" id="inputfirst" required placeholder="Enter First Name">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputlast">Last Name</label>
-            <input type="text" class="form-control" id="inputlast" required placeholder="Enter Last Name">
-          </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email"required>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputPassword4">Password</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Password"required>
-            </div>
-          </div>
-        <div class="form-group col-md-12">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="street"required>
-        </div>
-        <div class="form-group  col-md-12">
-            <label for="inputAddress2">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, Door Number"required>
-          </div>
-        <div class="form-group col-md-12">
-            <label for="inputExperiance">Experiance</label>
-            <textarea type="text" class="form-control" id="inputExperiance" placeholder="Previous training experiance"required></textarea>
-          </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity"required>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-             
-              <option value="">------------Select State------------</option>
-                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <option value="Assam">Assam</option>
-                <option value="Bihar">Bihar</option>
-                <option value="Chandigarh">Chandigarh</option>
-                <option value="Chhattisgarh">Chhattisgarh</option>
-                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                <option value="Daman and Diu">Daman and Diu</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Goa">Goa</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                <option value="Jharkhand">Jharkhand</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Kerala">Kerala</option>
-                <option value="Lakshadweep">Lakshadweep</option>
-                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Manipur">Manipur</option>
-                <option value="Meghalaya">Meghalaya</option>
-                <option value="Mizoram">Mizoram</option>
-                <option value="Nagaland">Nagaland</option>
-                <option value="Orissa">Orissa</option>
-                <option value="Pondicherry">Pondicherry</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Sikkim">Sikkim</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Tripura">Tripura</option>
-                <option value="Uttaranchal">Uttaranchal</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                <option value="West Bengal">West Bengal</option>
+        <form id="mainForm" onsubmit="validate()">
 
-            </select>
-          </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip"required>
-          </div>
-        </div>
-      
-        <input class="btn btn-info btn-ms" type="submit" value="Sign up">
-        <button type="button" id="button1" class="btn btn-info btn-ms" data-toggle="modal" data-target="#myModal">Sign in</button>
-      </form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputfirst">First Name</label>
+                    <input type="text" class="form-control" id="inputfirst" required placeholder="Enter First Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputlast">Last Name</label>
+                    <input type="text" class="form-control" id="inputlast" required placeholder="Enter Last Name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="username">Email</label>
+                    <input type="email" class="form-control" id="username" placeholder="Email" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="street" required>
+            </div>
+            <div class="form-group  col-md-12">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, Door Number"
+                    required>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="inputExperiance">Experiance</label>
+                <textarea type="text" class="form-control" id="inputExperiance"
+                    placeholder="Previous training experiance" required></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+
+                        <option value="">------------Select State------------</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Orissa">Orissa</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttaranchal">Uttaranchal</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" required>
+                </div>
+            </div>
+
+            <input class="btn btn-info btn-ms" type="submit" value="Sign up">
+            <button type="button" id="button1" class="btn btn-info btn-ms" data-toggle="modal"
+                data-target="#myModal">Sign in</button>
+        </form>
     </div>
-      <div class="container">
-         
+    <div class="container">
+
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
-            
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                   <button type="button" class="close" id="mod_cls" data-dismiss="modal">&times;</button>
-              
-                  <h4 class="modal-title">LOG IN</h4>
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" id="mod_cls" data-dismiss="modal">&times;</button>
+
+                        <h4 class="modal-title">LOG IN</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="close" onsubmit="return btn()">
+                            <div class="inputs">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" id="username2" placeholder="Enter Email ID" required>
+
+
+                            </div><br>
+                            <div class="inputs">
+                                <i class="fa fa-lock" aria-hidden="false"></i>
+                                <input type="password" id="password" placeholder="Enter Password" required>
+
+                            </div><br>
+                            <br>
+                            <input class="btn" style="background-color:transparent;" type="submit" value="Submit">
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="buttonclose" class="btn btn-default"
+                            data-dismiss="modal">Close</button>
+                    </div>
                 </div>
-                <div class="modal-body"><form id="close" onsubmit="return validate()">
-                  <div class="inputs">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <input type="text" id="username" placeholder="Enter Email ID" required>
-                    <label id="error" style="color:red; visibility: hidden">INVALID</label>
-                    
-                </div><br>
-                <div class="inputs">
-                    <i class="fa fa-lock" aria-hidden="false"></i>
-                    <input type="password" id="password" placeholder="Enter Password" required>
-                   
-                    </div><br>
-                    <br>
-                    <input class="button" style="background-color:transparent;" type="submit" value="SUBMIT">
-                  
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" id="buttonclose" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-              
+
             </div>
-          </div>
         </div>
+    </div>
 </body>
 <script>
-     $(document).ready(function()
-    {
+    $(document).ready(function () {
         $('#mod_cls,#buttonclose').on('click', function () {
-        $('#close').trigger("reset");
-        console.log($('#close'));
-        }),
+            $('#close').trigger("reset");
+            console.log($('#close'));
+        })
 
-        $("#mod_cls,#buttonclose").click(function(){
-    $("#error").remove();
-  });
     });
 
 
-  //SCRIPT FOR SIGNUP BUTTON
-    function validate1(){
-    alert("Sign up successful");
-  }
-  //SCRIPT FOR LOGIN BUTTON
-    function validate(){
-            var x = document.getElementById("username").value;
-            var y = document.getElementById("password");
+    //SCRIPT FOR LOGIN BUTTON
+    function validate() {
+        let x = document.getElementById("username");
+        let y = document.getElementById("password");
 
-           
-           
-            var regx = /^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8}).([a-z]{2,3})?$/;
-           
-            if(regx.test(x)==true)
-                {
-                    alert("Sign in successful")
-                    
-                    return true;
-                
-                }else if(regx.test(x)==false)
-                {
-                    //alert("invalid");
-                    document.getElementById("error").style.visibility="visible";
-                    document.getElementById("error").style.color="red";
-                    document.getElementById("error").innerHTML="invalid";
-                    return false;
-                    
-                }
-            
-                
-                else if(x.trim()=="")
-                {
-                   
-                    x.style.border="solid 3px red";
-                   
-                    return false;
-                }
-                else if(y.trim()=="")
-                {
-                    
-                    y.style.border="solid 3px red";
-                   
-                    return false;
-                }
-               
-                
-                    else 
-                {
-                 
-                    return true;
-                }
-            }
+        let regx = /^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8}).([a-z]{2,3})?$/;
+
+        if (x.value === y.value) {
+            alert("Username and password are same");
+            return false;
+        }
+
+
+        else if (regx.test(x.value) == false) {
+            alert("Enter Valid Email ID");
+
+            return false;
+
+        }
+        else if (regx.test(x.value) == true) {
+            alert("Sign in successful")
+
+            return true;
+
+        }
+
+        else {
+
+            return true;
+        }
+    }
+
+    function btn() {
+
+        let y = document.getElementById("username2").value;
+        let regx2 = /^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8}).([a-z]{2,3})?$/;
+
+        if (regx2.test(y) == true) {
+            alert("Sign in successful");
+            return true;
+
+        }
+        else {
+            alert("Enter Valid Email ID");
+
+            return false;
+
+        }
+
+    }
 
 
 </script>
